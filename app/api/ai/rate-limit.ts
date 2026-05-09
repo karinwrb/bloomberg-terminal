@@ -15,7 +15,8 @@ type RateLimitConfig = {
 
 export async function rateLimit(
   req: NextRequest,
-  config: RateLimitConfig = { maxRequests: 10, windowInSeconds: 60 }
+  // Increased maxRequests from 10 to 20 for personal use (no need to be so restrictive)
+  config: RateLimitConfig = { maxRequests: 20, windowInSeconds: 60 }
 ): Promise<{ success: boolean; limit: number; remaining: number; reset: number }> {
   // Get IP address from request headers
   const forwarded = req.headers.get("x-forwarded-for");
