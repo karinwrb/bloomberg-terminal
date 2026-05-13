@@ -49,6 +49,8 @@ OPENAI_API_KEY=your_openai_api_key
 ALLOWED_ORIGINS=https://your-domain.com,http://localhost:3000
 ```
 
+> **Note (personal fork):** I'm running this locally without Redis and OpenAI — only `ALPHA_VANTAGE_API_KEY` is strictly needed to get market data working. The app falls back to simulated data if the others are missing.
+
 ## Project Structure
 
 The project is structured as follows:
@@ -71,33 +73,4 @@ The project is structured as follows:
   - `/views`: Main view components for different terminal screens
     - Market view, news view, volatility view, etc.
 - `/components/ui`: shadcn/ui base components (design system)
-- `/lib`: Application-wide utility functions and shared code
-- `/public`: Static assets and images
-
-### Component Organization Philosophy
-
-Components are organized based on:
-
-- **Core Components**: Foundational UI elements specific to the Bloomberg Terminal interface
-- **Layout Components**: Define the overall structure and layout of the application
-- **UI Components**: Specialized components for data visualization and user interaction
-- **View Components**: Complete screens or major sections of the application
-
-## Performance Optimizations
-
-- React Query for efficient data fetching and caching
-- Optimized update cycles to reduce API calls
-- Memoization of expensive calculations
-- Conditional rendering for performance-critical components
-
-## Security Features
-
-- **Origin Restriction**: API endpoints are restricted to specific domains configured via the `ALLOWED_ORIGINS` environment variable
-- **Rate Limiting**: Prevents abuse by limiting requests per IP address
-- **Input Validation**: All API inputs are validated and sanitized using Zod schemas
-- **Response Limiting**: AI responses are limited in token count to prevent excessive usage
-- **Environment Variables**: Sensitive keys are stored in environment variables and not exposed to the client
-
-## License
-
-MIT
+- `/lib`: Application-wide utility function
