@@ -52,6 +52,8 @@ ALLOWED_ORIGINS=https://your-domain.com,http://localhost:3000
 > **Note (personal fork):** I'm running this locally without Redis and OpenAI — only `ALPHA_VANTAGE_API_KEY` is strictly needed to get market data working. The app falls back to simulated data if the others are missing.
 >
 > Alpha Vantage free tier is limited to 25 requests/day, so I mostly rely on the simulated data anyway. Good enough for poking around the UI.
+>
+> My default watchlist is set to: `AAPL`, `MSFT`, `NVDA`, `TSLA`, `SPY` — edit `components/bloomberg/lib/config.ts` if you want different defaults.
 
 ## Project Structure
 
@@ -69,7 +71,4 @@ The project is structured as follows:
     - Terminal container, header, footer, and navigation elements
   - `/lib`: Terminal-specific utility functions and configuration
   - `/providers`: Context providers for React Query and other global state
-  - `/ui`: Terminal-specific UI components
-    - Data visualization components (tables, sparklines, etc.)
-    - Terminal-specific UI elements that aren't part of the core
-  
+  - `/ui`: Terminal-specific 
