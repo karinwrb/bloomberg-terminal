@@ -54,6 +54,8 @@ ALLOWED_ORIGINS=https://your-domain.com,http://localhost:3000
 > Alpha Vantage free tier is limited to 25 requests/day, so I mostly rely on the simulated data anyway. Good enough for poking around the UI.
 >
 > My default watchlist is set to: `AAPL`, `MSFT`, `NVDA`, `TSLA`, `SPY` — edit `components/bloomberg/lib/config.ts` if you want different defaults.
+>
+> I also bumped the simulated data refresh interval from 5s to 15s in `config.ts` — the default felt too aggressive for a laptop on battery.
 
 ## Project Structure
 
@@ -69,6 +71,4 @@ The project is structured as follows:
   - `/hooks`: Custom React hooks for data fetching and UI state
   - `/layout`: Layout components that define the terminal structure
     - Terminal container, header, footer, and navigation elements
-  - `/lib`: Terminal-specific utility functions and configuration
-  - `/providers`: Context providers for React Query and other global state
-  - `/ui`: Terminal-specific 
+  - `/lib`: Terminal
