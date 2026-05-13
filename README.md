@@ -50,6 +50,8 @@ ALLOWED_ORIGINS=https://your-domain.com,http://localhost:3000
 ```
 
 > **Note (personal fork):** I'm running this locally without Redis and OpenAI — only `ALPHA_VANTAGE_API_KEY` is strictly needed to get market data working. The app falls back to simulated data if the others are missing.
+>
+> Alpha Vantage free tier is limited to 25 requests/day, so I mostly rely on the simulated data anyway. Good enough for poking around the UI.
 
 ## Project Structure
 
@@ -70,7 +72,4 @@ The project is structured as follows:
   - `/ui`: Terminal-specific UI components
     - Data visualization components (tables, sparklines, etc.)
     - Terminal-specific UI elements that aren't part of the core
-  - `/views`: Main view components for different terminal screens
-    - Market view, news view, volatility view, etc.
-- `/components/ui`: shadcn/ui base components (design system)
-- `/lib`: Application-wide utility function
+  
