@@ -56,6 +56,8 @@ ALLOWED_ORIGINS=https://your-domain.com,http://localhost:3000
 > My default watchlist is set to: `AAPL`, `MSFT`, `NVDA`, `TSLA`, `SPY` — edit `components/bloomberg/lib/config.ts` if you want different defaults.
 >
 > I also bumped the simulated data refresh interval from 5s to 15s in `config.ts` — the default felt too aggressive for a laptop on battery.
+>
+> Dark mode is forced on by default in `atoms/theme.ts` — I never use light mode and it was annoying to toggle every time.
 
 ## Project Structure
 
@@ -69,6 +71,4 @@ The project is structured as follows:
     - Reusable UI elements specific to the terminal (buttons, modals, etc.)
     - User interaction components (keyboard shortcuts, watchlist, etc.)
   - `/hooks`: Custom React hooks for data fetching and UI state
-  - `/layout`: Layout components that define the terminal structure
-    - Terminal container, header, footer, and navigation elements
-  - `/lib`: Terminal
+  - `/layou
